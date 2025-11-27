@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 # RUTA DEL HTML
-@app.route("/")
+@app.route("/UVM_Server/Server/UVM.html")
 def home():
     return send_from_directory(".", "UVM.html")
 
