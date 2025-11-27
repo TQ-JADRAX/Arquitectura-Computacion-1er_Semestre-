@@ -1,0 +1,78 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        div{
+            background-color: #FF2800;
+             margin: 30px;
+             margin-left: 50px;
+             margin-right: 50px;
+             width: 15vw;
+             height: 5vh;
+             position: sticky;
+             top: 20px;
+             z-index: 100;
+             display: flex;
+             align-items: center;
+             justify-content: space-around;
+             border-radius: 10px ;
+             padding:30px;
+             transition: all .5s ease-in-out;
+
+        }
+        div :hover{
+            transition: ease;
+            background-color: #F23311;
+            
+        }
+        .waza{
+            color: blue;
+        }
+        a{
+            color: beige;
+        }
+    </style>
+</head>
+<body>
+   
+    <br><br>
+      <!-- Botón para mostrar/ocultar -->
+    <button onclick="toggleImagen()">UVM_logo</button>
+
+    <!-- Imagen inicialmente oculta -->
+    <img id="miImagen" 
+         src="/static/UVM_logo.png" 
+         style="display:none; width:200px; margin-top:10px;">
+    
+    <!-- Botón para descargar -->
+    <br><br>
+    <a id="downloadBtn" 
+       href="/static/UVM_logo.png" 
+       download="UVM_logo.png" 
+       style="display:none;"
+       class="waza">
+       Descargar imagen
+    </a>
+    <div>
+        <a href="/static/UVM_logo_Comprimido.zip">Descargar archivo UVM_logo_Comprimido.zip</a>
+    </div>
+</body>
+<script>
+ function toggleImagen() {
+            const img = document.getElementById("miImagen");
+            const dl = document.getElementById("downloadBtn");
+
+            if (img.style.display === "none") {
+                img.style.display = "block";   // mostrar
+                dl.style.display = "inline";   // mostrar botón de descarga
+            } else {
+                img.style.display = "none";    // ocultar
+                dl.style.display = "none";     // ocultar botón de descarga
+            }
+        }
+</script>
+
+</html>
